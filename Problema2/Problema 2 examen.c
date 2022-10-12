@@ -1,23 +1,36 @@
-#include<stdio.h>
+#include <stdio.h>
+//Maximiliano Martienz Farias ExamenED
+int recursiva(int);
+int razon =3;
+int resultado;
 
-void imprimir(int,int);
-int main(){
+int main()
+{
+	int i;
+	int numeroElementos;
+	int numeroInicial=5;
+	printf("Ingresa el limite de numeros que quiere saber de  la secuencia:");
+	scanf("%d",&numeroElementos);  
+	printf("\numPrimer limite: %d \n",numeroInicial);
+	printf("\numResto de limite: ");
 	
-	int inicio,fin;
-	printf("Ingresar el numero 5\n");
-	scanf("%d",&inicio);
-	printf("\nIngresar el numero final 500\n");
-	scanf("%d",&fin);
 	
-	imprimir(inicio, fin);
-	return 0;
-	
-}
-void imprimir(int ini, int fin){
-	if(ini < fin){
-		printf("\n%d ",ini);
-		ini=ini*3;
-		imprimir(ini,fin);
+	for(i= 0; i<=numeroElementos; i++)
+	{
+		printf("%d, ",recursiva(numeroInicial));
+		numeroInicial=resultado;
 	}
+	return 0;
+}
+int recursiva(int numeroInicial)
+{
 
- }
+	if(numeroInicial>0)
+	{
+		return resultado=numeroInicial*razon;
+	}
+	else
+	{
+	    return 1;    
+	}
+}
